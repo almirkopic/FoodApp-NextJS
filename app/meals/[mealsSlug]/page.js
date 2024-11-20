@@ -3,6 +3,19 @@ import classes from "./page.module.css";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
+export async function generateMedatada({ params }) {
+  const meal = getMeal(params.mealSlug);
+
+  if (!meal) {
+    notFound();
+  }
+
+  return {
+    title: meal.title,
+    description: meal.summary,
+  };
+}
+
 function MealsSlugPage({ params }) {
   const meal = getMeal(params.mealsSlug);
 
@@ -16,7 +29,7 @@ function MealsSlugPage({ params }) {
     <>
       <header className={classes.header}>
         <div className={classes.image}>
-          <Image src={meal.image} fill />
+          <Image src={meal.image} alt="Slug image" fill />
         </div>
         <div className={classes.headerText}>
           <h1>{meal.title}</h1>
