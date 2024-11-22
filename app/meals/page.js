@@ -3,6 +3,7 @@ import classes from "./page.module.css";
 import MealsGrid from "@/components/main-header/meals/meals-grid";
 import { getMeals } from "@/lib/meals";
 import { Suspense } from "react";
+import Spinner from "@/components/spinner/spinner";
 
 export const metadata = {
   title: "Al lmeals",
@@ -31,9 +32,7 @@ async function MealsPage() {
         </p>
       </header>
       <main className={classes.main}>
-        <Suspense
-          fallback={<p className={classes.loading}>Fetching meals...</p>}
-        >
+         <Suspense fallback={<Spinner />}>
           <Meals />
         </Suspense>
       </main>
