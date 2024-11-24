@@ -1,5 +1,5 @@
-<div align="center">
-  <img src="/cover.jpg" alt="Description of image" />
+<div style="text-align: center;">
+  <img src="./cover.jpg" alt="Description of image" />
 </div>
 
 
