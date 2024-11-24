@@ -1,6 +1,6 @@
-<div style="text-align: center;">
-  <img src="./cover.jpg" alt="Description of image" />
-</div>
+
+![cover2](./cover1.jpg)
+
 
 
 ![cover2](./cover2.jpg)
